@@ -4,13 +4,13 @@ metadata:
   name: chatapp-ingress
   namespace: chat-app
   labels:
-    name: chatapp-ingress
+    app.kubernetes.io/name: chatapp-ingress
   annotations:
     nginx.ingress.kubernetes.io/rewrite-target: /
     nginx.ingress.kubernetes.io/ssl-redirect: "false"
 spec:
   rules:
-  - host: chat-tws.com
+  - host: chat-anil.com
     http:
       paths:
       - pathType: Prefix
@@ -26,4 +26,4 @@ spec:
           service:
             name: backend
             port: 
-              number: 5001
+              number: 5001        
